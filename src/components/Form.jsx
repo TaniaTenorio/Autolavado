@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 import Button from './Button';
 
 class Form extends Component {
+
     constructor(props){
         super(props)
         this.state = {
@@ -113,5 +113,24 @@ class Form extends Component {
         )
     }
 };
+
+
+            <Button />
+          </fieldset>
+          <fieldset>
+            <label>Iniciar Sesión</label>
+            <label name='phone-or-mail'>
+              <input type='text' placeholder='telefono/correo'></input>
+            </label>
+            <label>
+              <input></input>
+            </label>
+            <Button />
+          </fieldset>
+        </form>
+      </React.Fragment>
+    );
+  }
+}
 
 export default Form;
