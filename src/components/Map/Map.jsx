@@ -61,7 +61,7 @@ class Map extends Component {
     return (
       <div
         id='here-map'
-        style={{ width: '100%', eight: '100vh', background: 'grey' }}></div>
+        style={{ width: '100%', height: '100vh', background: 'grey' }}></div>
     );
   }
 }

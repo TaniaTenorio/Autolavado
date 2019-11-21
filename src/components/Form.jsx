@@ -33,7 +33,7 @@ class Form extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1>Bienvendio</h1>
+        <h1>Bienvenido</h1>
         <form>
           <fieldset>
             <legend>Registro</legend>
@@ -83,19 +83,6 @@ class Form extends Component {
             </label>
 
             <Button submit={this.onSubmit} />
-          </fieldset>
-          <fieldset>
-            <legend>Iniciar Sesión</legend>
-            <label name='phone-or-mail'>
-              <input type='text' placeholder='Telefono o correo'></input>
-            </label>
-            <label name='phone-or-mail'>
-              <input type='password' placeholder='Contraseña'></input>
-            </label>
-            <label>
-              <input></input>
-            </label>
-            <Button />
           </fieldset>
         </form>
       </React.Fragment>

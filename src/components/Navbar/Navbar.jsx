@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
+import Menu from './Menu';
 
 class Navbar extends Component {
   render() {
     return (
       <header>
         <nav>
-          <figure>
-            <img src='' alt='' />
-          </figure>
-          <a href='/'>
-            <i className='material-icons'>menu</i>
-          </a>
+          <Menu />
         </nav>
       </header>
     );
