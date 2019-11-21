@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Button from './Button';
+
 
 class Form extends Component {
 
@@ -88,9 +88,7 @@ class Form extends Component {
                             <input type="checkbox"></input>
                             Acepto términos y condiciones
                         </label>
-                        <Link to="/Home">
-                        <Button submit={this.onSubmit}/>
-                    </Link>
+                        
                     </fieldset>
                     <fieldset>
                         <legend>Iniciar Sesión</legend>
@@ -103,34 +101,14 @@ class Form extends Component {
                         <label>
                             <input></input>
                         </label>
-                        <Link to="/Home">
-                            <Button />
-                        </Link>
+                       
                     </fieldset>
                 </form>
                 
-            </React.Fragment>
-        )
-    }
-};
-
-
-            <Button />
-          </fieldset>
-          <fieldset>
-            <label>Iniciar Sesión</label>
-            <label name='phone-or-mail'>
-              <input type='text' placeholder='telefono/correo'></input>
-            </label>
-            <label>
-              <input></input>
-            </label>
-            <Button />
-          </fieldset>
-        </form>
+           
+        
       </React.Fragment>
     );
   }
 }
-
 export default Form;

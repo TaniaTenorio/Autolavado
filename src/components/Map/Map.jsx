@@ -17,13 +17,23 @@ class Map extends Component {
       style: props.style
     };
   }
-  getPlatform() {
+  
+  
+   getPlatform() {
     return new window.H.service.Platform(this.state);
   }
-  getMap(container, layers, settings) {
-    return new window.H.Map(container, layers, settings);
+   async getMap(container, layers, settings) {
+    
+    return  await new window.H.Map(container, layers, settings);
+    
   }
-  getEvents(map) {
+  
+  // async function getMap(container, layers, settings) {
+  //    await new window.H.Map(container, layers, settings)  
+  // }
+
+  
+   getEvents(map) {
     return new window.H.mapevents.MapEvents(map);
   }
   getBehavior(events) {
@@ -32,36 +42,40 @@ class Map extends Component {
   getUI(map, layers) {
     return new window.H.ui.UI.createDefault(map, layers);
   }
-  componentDidMount() {
+  async componentDidMount() {
     this.platform = this.getPlatform();
-    var layers = this.platform.createDefaultLayers();
+   let createDefaultLayers = this.platform.createDefaultLayers()
+    // var layers = this.setState({platform: createDefaultLayers});
     var element = document.getElementById('here-map');
-    this.map = this.getMap(element, layers.normal.map, {
+    this.map = await this.getMap(element,  createDefaultLayers.normal.map, {
       center: this.state.center,
       zoom: this.state.zoom
     });
+   
+    
     var events = this.getEvents(this.map);
     // eslint-disable-next-line
     var behavior = this.getBehavior(events);
     // eslint-disable-next-line
-    var ui = this.getUI(this.map, layers);
+    var ui = this.getUI(this.map, createDefaultLayers);
   }
-  shouldComponentUpdate(props, state) {
-    this.changeTheme(props.theme, props.style);
-    return false;
-  }
-  changeTheme(theme, style) {
-    var tiles = this.platform.getMapTileService({ type: 'base' });
-    var layer = tiles.createTileLayer('maptile', theme, 256, 'png', {
-      style: 'flame'
-    });
-    this.map.setBaseLayer(layer);
-  }
+  
+  
   render() {
     return (
       <div
         id='here-map'
-        style={{ width: '100%', eight: '100vh', background: 'grey' }}></div>
+        style={{ width: '100%', height: '100vh', background: 'grey' }}>
+          <div>
+            <input>
+            </input>
+
+          </div>
+            <label htmlFor=""><i className="fas fa-search-plus"></i></label>
+          <div>
+            <button>Solicitar servicio</button>
+          </div>
+        </div>
     );
   }
 }

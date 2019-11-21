@@ -25,7 +25,7 @@ class MapPages extends Component {
           app_code='IhfB_irYGjdbpNEyVwLgcr-pBgBZF490CcZNGJldCyA'
           lat='42.345978'
           lng='-83.0405'
-          zoom='20'
+          zoom='5'
           theme={this.state.theme}
         />
       </section>
