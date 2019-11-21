@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/TaniaTenorio/Autolavado/static/css/main.34de6062.chunk.css",
+    "main.js": "/TaniaTenorio/Autolavado/static/js/main.2144daf3.chunk.js",
+    "main.js.map": "/TaniaTenorio/Autolavado/static/js/main.2144daf3.chunk.js.map",
+    "runtime-main.js": "/TaniaTenorio/Autolavado/static/js/runtime-main.bbeeebc3.js",
+    "runtime-main.js.map": "/TaniaTenorio/Autolavado/static/js/runtime-main.bbeeebc3.js.map",
+    "static/js/2.c9ea10ad.chunk.js": "/TaniaTenorio/Autolavado/static/js/2.c9ea10ad.chunk.js",
+    "static/js/2.c9ea10ad.chunk.js.map": "/TaniaTenorio/Autolavado/static/js/2.c9ea10ad.chunk.js.map",
+    "index.html": "/TaniaTenorio/Autolavado/index.html",
+    "precache-manifest.791a011cfe984291d97a6ee3f5c7bd4b.js": "/TaniaTenorio/Autolavado/precache-manifest.791a011cfe984291d97a6ee3f5c7bd4b.js",
+    "service-worker.js": "/TaniaTenorio/Autolavado/service-worker.js",
+    "static/css/main.34de6062.chunk.css.map": "/TaniaTenorio/Autolavado/static/css/main.34de6062.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bbeeebc3.js",
+    "static/js/2.c9ea10ad.chunk.js",
+    "static/css/main.34de6062.chunk.css",
+    "static/js/main.2144daf3.chunk.js"
+  ]
+}
