@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 
+import './Components.css';
+
 import Button from './Button';
+
 
 class Form extends Component {
   constructor(props) {
@@ -32,7 +35,7 @@ class Form extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <section>
         <h1>Bienvenido</h1>
         <form>
           <fieldset>
@@ -78,14 +81,16 @@ class Form extends Component {
                 onChange={this.onChangeHandler}></input>
             </label>
             <label>
-              <input type='checkbox'></input>
-              Acepto términos y condiciones
+              <input type='checkbox'/>
+              <span>Acepto términos y condiciones</span>
             </label>
-
-            <Button submit={this.onSubmit} />
+            <br/>
+            <Button
+            text={"Siguiente"} 
+            submit={this.onSubmit} />
           </fieldset>
         </form>
-      </React.Fragment>
+      </section>
     );
   }
 }
