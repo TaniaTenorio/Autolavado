@@ -1,11 +1,16 @@
 .login-form,
-.login-form article fieldset{
+.login-form article fieldset {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border:none;
+    border: none;
 }
-article{
+
+article {
     width: 100%;
+}
+
+.login-form img {
+    width: 15rem;
 }

@@ -5,7 +5,6 @@ import './Components.css';
 
 import Button from './Button';
 
-
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -36,10 +35,9 @@ class Form extends Component {
   render() {
     return (
       <section>
-        <h1>Bienvenido</h1>
+        <h3>Registro</h3>
         <form>
           <fieldset>
-            <legend>Registro</legend>
             <label name='text'>
               <input
                 name='name'
@@ -80,14 +78,14 @@ class Form extends Component {
                 value={this.state.password}
                 onChange={this.onChangeHandler}></input>
             </label>
-            <label>
-              <input type='checkbox'/>
-              <span>Acepto términos y condiciones</span>
-            </label>
-            <br/>
-            <Button
-            text={"Siguiente"} 
-            submit={this.onSubmit} />
+            <div className='checkbox-label'>
+              <label>
+                <input type='checkbox' />
+                <span>Acepto términos y condiciones</span>
+              </label>
+              <br />
+              <Button text={'Siguiente'} submit={this.onSubmit} />
+            </div>
           </fieldset>
         </form>
       </section>
