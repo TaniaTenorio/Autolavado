@@ -21,11 +21,13 @@ class Login extends Component {
             <label name='phone-or-mail'>
               <input type='password' placeholder='Contraseña'></input>
             </label>
+          </fieldset>
+          <fieldset className='btn-container'>
             <Link to='/home'>
               <Button text={'Iniciar sesión'} />
             </Link>
           </fieldset>
-          <fieldset>
+          <fieldset className='btn-container'>
             <Link to='/register'>
               <Button text={'Registarse'} />
             </Link>
