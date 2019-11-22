@@ -53,32 +53,32 @@ class Map extends Component {
       zoom: this.state.zoom
     });
 
-    var onResult = function(result) {
-      var locations = result.Response.View[0].Result,
-        position,
-        marker;
-      // Add a marker for each location found
-      for (let i = 0;  i < locations.length; i++) {
-      position = {
-        lat: locations[i].Location.DisplayPosition.Latitude,
-        lng: locations[i].Location.DisplayPosition.Longitude
-      };
-      marker = new window.H.map.Marker(position);
-      this.map.addObject(marker);
-      }
-    };
-    var geocoder = this.platform.getGeocodingService();
-    var geocodingParams = {
-      searchText: '200 S Mathilda Ave, Sunnyvale, CA'
-    };
-    geocoder.geocode(geocodingParams, onResult, function(e) {
-      alert(e);
-    });
+    // var onResult = await function(result) {
+    //   var locations = result.Response.View[0].Result,
+    //     position,
+    //     marker;
+    //   // Add a marker for each location found
+    //   for (let i = 0;  i < locations.length; i++) {
+    //   position = {
+    //     lat: locations[i].Location.DisplayPosition.Latitude,
+    //     lng: locations[i].Location.DisplayPosition.Longitude
+    //   };
+    //   marker = new window.H.map.Marker(position);
+    //   this.map.addObject(marker);
+    //   }
+    // };
+    var geocoder = await this.platform.getGeocodingService();
+    // var geocodingParams = {
+    //   searchText: '200 S Mathilda Ave, Sunnyvale, CA'
+    // };
+    // geocoder.geocode(geocodingParams, onResult, function(e) {
+    //   console.log(e);
+    // });
     
     //Código para globito
 
     var reverseGeocodingParameters = {
-      prox: '52.5309,13.3847,150',
+      prox: '-99.803085, 19.491327, 1000',
       mode: 'retrieveAddresses',
       maxresults: 1
     };
@@ -96,7 +96,7 @@ class Map extends Component {
     geocoder.reverseGeocode(
       reverseGeocodingParameters,
       onSuccess,
-      function(e) { alert(e); });
+      function(e) { console.log(e)});
    
     
     var events = this.getEvents(this.map);
@@ -112,16 +112,11 @@ class Map extends Component {
     return (
       <div
         id='here-map'
-        style={{ width: '100%', height: '100vh', background: 'grey' }}>
-          <div>
-            <input>
-            </input>
+        style={{ width: '95vw', height: '90vh', position:'relative', marginLeft:'0'}}>
+         
+            <button className="btn-map">Solicitar servicio</button>
 
-          </div>
-          <div className="here-bottom">
-            <label htmlFor=""><i className="fas fa-search-plus"></i></label>
-            <button>Solicitar servicio</button>
-          </div>
+        
           
 
         </div>

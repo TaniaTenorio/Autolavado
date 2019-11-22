@@ -4,5 +4,17 @@
   height: 100vh;
 }
 #here-map{
-  position: absolute;
+ width: inherit;
+  margin-left: 0;
+}
+
+.btn-map{
+  position:absolute;
+  z-index: 999;
+  margin-top: 29rem;
+  margin-left: 1rem;
+  background-color: #42A5F5;
+  color: white;
+  width: 19rem;
+  height: 7vh;
 }

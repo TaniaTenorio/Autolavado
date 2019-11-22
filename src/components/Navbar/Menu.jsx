@@ -33,7 +33,7 @@ class Sidebar extends Component {
                 Mi plan
               </a>
             </li>
-            <a>Mis autos</a>
+            <a href="#">Mis autos</a>
           </li>
           <li>
             <a className='waves-effect' href='#!'>
