@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import Button from '../components/Button';
+import BtnWhite from '../components/BtnWhite'
 
 class ScheduleView extends Component {
     render() {
@@ -9,10 +9,10 @@ class ScheduleView extends Component {
             <section className="schedule-view">
                 <h1>¿Cuándo deseas recibir tu servicio?</h1>
                 <Link to="/VehicleForm">
-                    <Button text={"Ahora"} />
+                    <BtnWhite text={"Ahora"} />
                 </Link>
                 <Link>
-                    <Button text={"En otro momento"} />
+                    <BtnWhite text={"En otro momento"} />
                 </Link>
             </section>
         )
