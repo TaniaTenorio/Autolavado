@@ -12,7 +12,9 @@ class MapView extends Component {
       <React.Fragment>
         <Navbar />
         <MapPages />
-        <Button text={"Solicitar servicio"} />
+        <Link to="/schedule">
+          <Button text={"Solicitar servicio"} />
+        </Link >
       </React.Fragment>
     );
   }
