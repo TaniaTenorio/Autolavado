@@ -1,55 +1,72 @@
 import React, { Component } from 'react';
+import M from 'materialize-css/dist/js/materialize.min.js';
+import 'materialize-css/dist/css/materialize.min.css';
+import '../Components.css';
 
-class Navbar extends Component {
+class Sidebar extends Component {
+  componentDidMount() {
+    var elem = document.querySelector('.sidenav');
+    var instance = M.Sidenav.init(elem, {
+      edge: 'left',
+      inDuration: 250
+    });
+  }
+
   render() {
     return (
-      <React.Fragment>
-        <ul id='mobile-menu'>
+      <div>
+        <ul id='slide-out' className='sidenav'>
+          <li id='user'>
+            <a href='#!'>
+              <figure>
+                <img src='./assets/LOGO-bubbles.svg' alt='Logo' />
+              </figure>
+              <p>Nombre de usuario</p>
+            </a>
+          </li>
           <li>
-            <a href='#mobile-menu-list' id='menu'>
-              <i className='material-icons'>menu</i>
+            <div className='divider' />
+          </li>
+          <li>
+            <li>
+              <a href='#!' className='subheader'>
+                Mi plan
+              </a>
+            </li>
+            <a>Mis autos</a>
+          </li>
+          <li>
+            <a className='waves-effect' href='#!'>
+              Métodos de pago
+            </a>
+          </li>
+          <li>
+            <a className='waves-effect' href='#!'>
+              Historial
+            </a>
+          </li>
+          <li>
+            <a className='waves-effect' href='#!'>
+              Facturación
+            </a>
+          </li>
+          <li>
+            <a className='waves-effect' href='#!'>
+              Ayuda
+            </a>
+          </li>
+          <li>
+            <a className='waves-effect' href='#!'>
+              Cerrar sesión
             </a>
           </li>
         </ul>
-        <ul id='mobile-menu-list' className='hide'>
-          <li id='close-li'>
-            <a href='#h' id='close'>
-              <i className='material-icons'>close</i>
-            </a>
-          </li>
-
-          <ul>
-            <li className='menu-element'>
-              <a id='home-btn' href='#hero'>
-                Inicio
-              </a>
-            </li>
-
-            <li className='menu-element'>
-              <a id='about-btn' href='#about-me'>
-                Sobre mí
-              </a>
-            </li>
-            <li className='menu-element'>
-              <a id='projects-btn' href='#projects'>
-                Proyectos
-              </a>
-            </li>
-            <li className='menu-element'>
-              <a id='skills-btn' href='#skills'>
-                Habilidades
-              </a>
-            </li>
-            <li className='menu-element'>
-              <a href='#contact' id='contact-btn'>
-                Contacto
-              </a>
-            </li>
-          </ul>
-        </ul>
-      </React.Fragment>
+        <a href='#' data-target='slide-out' className='sidenav-trigger'>
+          <i className='material-icons'>menu</i>
+        </a>
+      </div>
     );
   }
 }
 
-export default Navbar;
+export default Sidebar;
