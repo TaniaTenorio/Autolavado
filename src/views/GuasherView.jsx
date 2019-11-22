@@ -9,7 +9,7 @@ class GuasherView extends Component {
                 <h1>¿Quién va a lavar tu auto?</h1>
                 <article>
                     <figure>
-                        <img src="" alt="güasher"/>
+                        <img src="../src/assets/Güasher.png" alt="güasher"/>
                         <Button text={"Contactar"} />
                     </figure>
                 </article>
