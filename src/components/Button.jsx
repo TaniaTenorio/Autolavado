@@ -6,7 +6,7 @@ class Button extends Component {
   render() {
     return (
       <button
-        className='btn-class waves-effect waves-light blue lighten-1 btn-small'
+        className= 'btn-class waves-effect waves-light blue lighten-1 btn-small'
         type='submit'
         onClick={this.props.submit}>
         {this.props.text}

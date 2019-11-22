@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Navbar from '../components/Navbar/Navbar';
 import MapPages from '../components/Map/MapPages';
-import Button from '../components/Button';
+
 
 class MapView extends Component {
   
@@ -12,9 +12,6 @@ class MapView extends Component {
       <React.Fragment>
         <Navbar />
         <MapPages />
-        <Link to="/schedule">
-          <Button text={"Solicitar servicio"} />
-        </Link >
       </React.Fragment>
     );
   }

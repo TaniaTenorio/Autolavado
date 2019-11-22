@@ -10,11 +10,25 @@
 
 .btn-map{
   position:absolute;
-  z-index: 999;
-  margin-top: 29rem;
+  z-index: 1;
+  top: 75vh;
+  left: 15vh;
+  /* margin-top: 29rem;
   margin-left: 1rem;
-  background-color: #42A5F5;
+  
   color: white;
   width: 19rem;
-  height: 7vh;
+  height: 7vh; */
+}
+.input-map {
+  z-index: 1;
+  position: absolute;
+  background-color: white;
+  top: 12vh;
+  left: 5vh;
+  width: 45vh;
+  border-radius: 25px;
+}
+.input-style {
+ border-bottom: white;
 }
