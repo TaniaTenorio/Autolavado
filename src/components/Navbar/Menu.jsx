@@ -2,14 +2,26 @@ import React, { Component } from 'react';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import 'materialize-css/dist/css/materialize.min.css';
 import '../Components.css';
+import { Link } from 'react-router-dom';
 
 class Sidebar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      Nombre: ''
+    };
+  }
+
   componentDidMount() {
     var elem = document.querySelector('.sidenav');
-    var instance = M.Sidenav.init(elem, {
+    M.Sidenav.init(elem, {
       edge: 'left',
       inDuration: 250
     });
+
+    //Set localstorage
+    const { Nombre } = JSON.parse(localStorage.getItem('clients'));
+    this.setState({ Nombre });
   }
 
   render() {
@@ -21,21 +33,22 @@ class Sidebar extends Component {
               <figure>
                 <img src='./assets/LOGO-bubbles.svg' alt='Logo' />
               </figure>
-              <p>Nombre de usuario</p>
+              <Link to='/profile'>
+                <p>
+                  <a className='user-name'>{this.state.Nombre}</a>
+                </p>
+              </Link>
             </a>
           </li>
           <li>
             <div className='divider' />
           </li>
           <li>
-            
-              <a href='#!' className='subheader'>
-                Mi plan
-              </a>
+            <a href='#!' className='subheader'>
+              Mi plan
+            </a>
 
-            
             <a>Mis autos</a>
-
           </li>
           <li>
             <a className='waves-effect' href='#!'>
