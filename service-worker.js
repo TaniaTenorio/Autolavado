@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Autolavado/precache-manifest.e9920d1a64ef016bcfe5e6f95b209e18.js"
+  "/Autolavado/precache-manifest.0117b77f9016c9d81588de09758115e9.js"
 );
 
 self.addEventListener('message', (event) => {

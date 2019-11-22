@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Autolavado/static/css/main.8de7440a.chunk.css",
-    "main.js": "/Autolavado/static/js/main.22a64c70.chunk.js",
-    "main.js.map": "/Autolavado/static/js/main.22a64c70.chunk.js.map",
+    "main.js": "/Autolavado/static/js/main.dc13a4af.chunk.js",
+    "main.js.map": "/Autolavado/static/js/main.dc13a4af.chunk.js.map",
     "runtime-main.js": "/Autolavado/static/js/runtime-main.d70b2739.js",
     "runtime-main.js.map": "/Autolavado/static/js/runtime-main.d70b2739.js.map",
     "static/css/2.e315d21c.chunk.css": "/Autolavado/static/css/2.e315d21c.chunk.css",
     "static/js/2.f1abdfec.chunk.js": "/Autolavado/static/js/2.f1abdfec.chunk.js",
     "static/js/2.f1abdfec.chunk.js.map": "/Autolavado/static/js/2.f1abdfec.chunk.js.map",
     "index.html": "/Autolavado/index.html",
-    "precache-manifest.e9920d1a64ef016bcfe5e6f95b209e18.js": "/Autolavado/precache-manifest.e9920d1a64ef016bcfe5e6f95b209e18.js",
+    "precache-manifest.0117b77f9016c9d81588de09758115e9.js": "/Autolavado/precache-manifest.0117b77f9016c9d81588de09758115e9.js",
     "service-worker.js": "/Autolavado/service-worker.js",
     "static/css/2.e315d21c.chunk.css.map": "/Autolavado/static/css/2.e315d21c.chunk.css.map",
     "static/css/main.8de7440a.chunk.css.map": "/Autolavado/static/css/main.8de7440a.chunk.css.map"
@@ -19,6 +19,6 @@
     "static/css/2.e315d21c.chunk.css",
     "static/js/2.f1abdfec.chunk.js",
     "static/css/main.8de7440a.chunk.css",
-    "static/js/main.22a64c70.chunk.js"
+    "static/js/main.dc13a4af.chunk.js"
   ]
 }
