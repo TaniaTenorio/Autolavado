@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import Button from '../components/Button';
 
@@ -28,7 +29,9 @@ class GuasherView extends Component {
                     <figure>
                         <img src="./assets/Bubbles.png" alt="burbujas"></img>
                     </figure>
-                    <Button text={"Aceptar"} />
+                    <Link to="/follow">
+                        <Button text={"Aceptar"} />
+                    </Link>
                 </article>
             </section>
         )

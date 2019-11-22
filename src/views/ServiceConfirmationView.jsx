@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import Button from '../components/Button';
 import Map from '../assets/map_roma.jpg'
@@ -8,7 +9,7 @@ class ServiceConfirmationView extends Component {
         return(
             <section>
                 <h1 className="text-title-service">Resumen de tu compra</h1>
-                <article className="art-service">
+                <article >
                     <h6>DIRECCIÓN DE TU SERVICIO</h6>
                     <p>Tonalá 10</p>
                     <p>Roma Norte</p>
@@ -17,7 +18,7 @@ class ServiceConfirmationView extends Component {
                         <img src={Map} alt='map'></img>
                     </figure>
                 </article>
-                <article  className="art-service">
+                <article  >
                     <ul>
                         <li>Paquete Básico</li>
                         <li>Volkswagen Bora</li>
@@ -28,7 +29,9 @@ class ServiceConfirmationView extends Component {
                 </article>
                 <article>
                     <p>El total de tu compra es $50</p>
-                    <Button text={"Confirmar"} />
+                    <Link to="/guasher">
+                        <Button text={"Confirmar"} />
+                    </Link>
                 </article>
             </section>
         )

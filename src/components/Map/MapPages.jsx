@@ -31,6 +31,7 @@ class MapPages extends Component {
           lng='-99.163085'
           zoom='5'
           theme={this.state.theme}
+          text={this.props.text}
         />
       
       </section>

@@ -130,7 +130,7 @@ class Map extends Component {
          </div>
          <div className="btn-map">
            <Link to="/schedule">
-            <Button text={"Solicitar servicio"}/>
+            <Button text={this.props.text}/>
            </Link>
          </div>
 
