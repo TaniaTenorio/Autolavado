@@ -23,9 +23,11 @@ class MapPages extends Component {
         <Map
           app_id='5OG7OkbY9XpgvRPABdnF'
           app_code='IhfB_irYGjdbpNEyVwLgcr-pBgBZF490CcZNGJldCyA'
-          lat='42.345978'
-          lng='-83.0405'
-          zoom='5'
+          // lat='19.421327'
+          // lng='-99.163085'
+          lat='19.421327'
+          lng='-99.163085'
+          zoom='0'
           theme={this.state.theme}
         />
       </section>

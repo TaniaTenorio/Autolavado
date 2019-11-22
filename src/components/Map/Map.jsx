@@ -42,6 +42,7 @@ class Map extends Component {
   getUI(map, layers) {
     return new window.H.ui.UI.createDefault(map, layers);
   }
+  
   async componentDidMount() {
     this.platform = this.getPlatform();
    let createDefaultLayers = this.platform.createDefaultLayers()
@@ -51,6 +52,51 @@ class Map extends Component {
       center: this.state.center,
       zoom: this.state.zoom
     });
+
+    var onResult = function(result) {
+      var locations = result.Response.View[0].Result,
+        position,
+        marker;
+      // Add a marker for each location found
+      for (let i = 0;  i < locations.length; i++) {
+      position = {
+        lat: locations[i].Location.DisplayPosition.Latitude,
+        lng: locations[i].Location.DisplayPosition.Longitude
+      };
+      marker = new window.H.map.Marker(position);
+      this.map.addObject(marker);
+      }
+    };
+    var geocoder = this.platform.getGeocodingService();
+    var geocodingParams = {
+      searchText: '200 S Mathilda Ave, Sunnyvale, CA'
+    };
+    geocoder.geocode(geocodingParams, onResult, function(e) {
+      alert(e);
+    });
+    
+    //Código para globito
+
+    var reverseGeocodingParameters = {
+      prox: '52.5309,13.3847,150',
+      mode: 'retrieveAddresses',
+      maxresults: 1
+    };
+
+    function onSuccess(result) {
+      var location = result.Response.View[0].Result[0];
+    
+      // Create an InfoBubble at the returned location with
+      // the address as its contents:
+      ui.addBubble(new window.H.ui.InfoBubble({
+        lat: location.Location.DisplayPosition.Latitude,
+        lng: location.Location.DisplayPosition.Longitude
+       }, { content: location.Location.Address.Label }));
+    };
+    geocoder.reverseGeocode(
+      reverseGeocodingParameters,
+      onSuccess,
+      function(e) { alert(e); });
    
     
     var events = this.getEvents(this.map);
@@ -62,6 +108,7 @@ class Map extends Component {
   
   
   render() {
+    
     return (
       <div
         id='here-map'
@@ -71,10 +118,12 @@ class Map extends Component {
             </input>
 
           </div>
+          <div className="here-bottom">
             <label htmlFor=""><i className="fas fa-search-plus"></i></label>
-          <div>
             <button>Solicitar servicio</button>
           </div>
+          
+
         </div>
     );
   }
