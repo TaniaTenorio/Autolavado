@@ -12,6 +12,13 @@ import ServiceLocation from './views/ServiceLocationView';
 import PaymentMethod from './views/PaymentMethodView';
 import ServiceConfirmation from './views/ServiceConfirmationView';
 
+
+import GuasherView from './views/GuasherView';
+import MyCarsView from './views/MyCarsView';
+
+import FollowWasherView from './views/FollowWasherView';
+
+
 // import PayPal from './views/PayPal';
 
 class App extends Component {
@@ -27,7 +34,13 @@ class App extends Component {
         <Route path='/serviceLocation' component={ServiceLocation} />
         <Route path='/paymentMethod' component={PaymentMethod} />
         <Route path='/serviceConfirmation' component={ServiceConfirmation} />
-        
+
+
+        <Route path='/guasher' component={GuasherView} />
+        <Route path='/myCars' component={MyCarsView} />
+        <Route path='/follow' component={FollowWasherView} />
+
+
         {/* <Route path='/payPal' component={PayPal} /> */}
         {/* <Route path='/user' component={UserProfile} />
           <Route path='/admin' component={Admin} />

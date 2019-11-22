@@ -52,6 +52,7 @@ h3 {
     color: #020723;
 }
 
+
 .section-selec-service{
     width: inherit;
     height: 100vh;
@@ -74,4 +75,8 @@ h3 {
 .map-box-ser{
     width: 15rem;
     height: 10vh;
+
+#slide-out a{
+    color: #020723;
+
 }

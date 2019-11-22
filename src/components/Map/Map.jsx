@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import '../../App.css';
+
+import Button from '../Button';
+
 class Map extends Component {
   constructor(props) {
     super(props);
@@ -112,12 +117,16 @@ class Map extends Component {
     return (
       <div
         id='here-map'
-        style={{ width: '95vw', height: '100vh', position:'relative', marginLeft:'0'}}>
-         
-            <button className="btn-map">Solicitar servicio</button>
 
-        
-          
+        style={{ width: '95vw', height: '90vh', position:'relative', marginLeft:'0'}}>
+         <div className="input-map">
+           <input className="input-style" type="text" placeholder="Ingresa tu dirección"/>
+         </div>
+         <div className="btn-map">
+           <Link to="/schedule">
+            <Button text={"Solicitar servicio"}/>
+           </Link>
+         </div>
 
         </div>
     );

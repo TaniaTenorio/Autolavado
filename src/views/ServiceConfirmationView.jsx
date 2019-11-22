@@ -26,7 +26,10 @@ class ServiceConfirmationView extends Component {
                     </ul>
                     <p>$50</p>
                 </article>
-                <Button text={"Confirmar"} />
+                <article>
+                    <p>El total de tu compra es $50</p>
+                    <Button text={"Confirmar"} />
+                </article>
             </section>
         )
     }
