@@ -17,7 +17,7 @@ class MyCarsView extends Component {
   componentDidMount() {
     //Set localstorage
     const { Marca, Modelo, Placas, Color } = JSON.parse(
-      localStorage.getItem('clients')
+      localStorage.getItem('cars')
     );
     this.setState({ Marca, Modelo, Placas, Color });
   }
