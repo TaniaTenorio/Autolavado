@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Button from '../components/Button';
+import BtnWhite from '../components/BtnWhite'
 
 class PaymentMethodView extends Component {
     render() {
@@ -8,9 +9,9 @@ class PaymentMethodView extends Component {
             <section>
                 <h1>Elige tu forma de pago</h1>
                 <article>
-                    <Button text={"Tarjeta"} />
+                    <BtnWhite text={"Tarjeta"} />
                     <p>Crédito o débito</p>
-                    <Button text={"Efectivo"} />
+                    <BtnWhite text={"Efectivo"} />
                 </article>
                 <Button text={"siguiente"} />
             </section>

@@ -13,6 +13,17 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.0/mapsjs-ui.css?dp-version=1526040296" />
+
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://kit.fontawesome.com/fb38cdee50.js" crossorigin="anonymous"></script>
+
+
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -31,12 +42,70 @@
     <script type="text/javascript" src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
     <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
     <title>Carwash</title>
 </head>
 
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #F5F5F5;
+        }
+        
+         ::-webkit-input-placeholder {
+            /* Edge */
+            color: #ACACAC;
+        }
+        
+         :-ms-input-placeholder {
+            /* Internet Explorer */
+            color: #ACACAC;
+        }
+        
+         ::placeholder {
+            color: #ACACAC;
+        }
+        
+        h3 {
+            font-size: 34px;
+            font-weight: 700;
+            color: #020723;
+        }
+        
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        nav {
+            background-color: transparent !important;
+            box-shadow: none !important;
+        }
+        
+        nav i {
+            color: black;
+        }
+
+        #btnWhite{
+            width: 20rem !important;
+            border-radius: 10px !important;
+        }
+        
+        .input-style {
+            border-bottom: none !important;
+            margin: 0 !important;
+        }
+        
+        .sidenav-overlay {
+            opacity: 0 !important;
+
+        }
+    </style>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

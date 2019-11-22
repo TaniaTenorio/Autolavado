@@ -3,3 +3,39 @@
   margin: 0 auto;
   height: 100vh;
 }
+#here-map{
+ width: inherit;
+  margin-left: 0;
+}
+
+.btn-map{
+  position:absolute;
+
+  z-index: 10;
+  margin-top: 34rem;
+
+  margin-left: 1rem;
+  
+  color: white;
+  width: 19rem;
+  height: 7vh;
+}
+
+.art-service{
+  text-align: center;
+
+  height: 7vh;
+}
+.input-map {
+  z-index: 1;
+  position: absolute;
+  background-color: white;
+  top: 12vh;
+  left: 5vh;
+  width: 45vh;
+  border-radius: 25px;
+}
+.input-style {
+ border-bottom: white;
+
+}

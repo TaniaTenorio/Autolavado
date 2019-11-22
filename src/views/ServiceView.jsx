@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
-import Button from '../components/Button';
+import { Link } from 'react-router-dom';
+
+import BtnWhite from '../components/BtnWhite';
+import '../components/Components.css'
+import Button from '../components/Button'
 
 class ServiceView extends Component {
     render() {
         return(
             <section>
-                <article>
-                    <h1>Selecciona tu servicio</h1>
-                    <Button text={"Básico"} />
-                    <p>Limpieza de exteriores: corrocería, vidrios, llantas y rines</p>
+                <article className="art-service">
+                    <h1 className="text-title-service">Selecciona tu servicio</h1>
+                    <BtnWhite text={"Básico"} className="text-black"/>
+                    <p>Limpieza de exteriores: corrocería,<br></br> vidrios, llantas y rines</p>
                     <p>Duración aprox: 20-35 min</p>
-                    <Button text={"Completo"} />
-                    <p>Básico + más limpieza y aspirado de interiores</p>
+                    <BtnWhite text={"Completo"} />
+                    <p>Básico + más limpieza y <br></br>aspirado de interiores</p>
                     <p>Duración aprox: 40 -50 min</p>
-                    <Button text={"personalizado"} />
-                    <p>Arma tu propio paquete con los servicios que deseas (pulido, encerado, etc.)</p>
+                    <BtnWhite text={"personalizado"} />
+                    <p>Arma tu propio paquete con los servicios<br></br> que deseas (pulido, encerado, etc.)</p>
                 </article>
-                <Button text={"Siguiente"} />
+                <Link to="/serviceConfirmation">
+                    <Button text={"Siguiente"} />
+                </Link>
             </section>
         )
     }

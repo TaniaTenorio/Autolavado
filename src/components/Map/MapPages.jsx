@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 // import './Map.css';
 import Map from './Map';
+
+
 class MapPages extends Component {
   constructor(props) {
     super(props);
@@ -23,11 +25,15 @@ class MapPages extends Component {
         <Map
           app_id='5OG7OkbY9XpgvRPABdnF'
           app_code='IhfB_irYGjdbpNEyVwLgcr-pBgBZF490CcZNGJldCyA'
-          lat='42.345978'
-          lng='-83.0405'
-          zoom='20'
+          // lat='19.421327'
+          // lng='-99.163085'
+          lat='19.421327'
+          lng='-99.163085'
+          zoom='5'
           theme={this.state.theme}
+          text={this.props.text}
         />
+      
       </section>
     );
   }

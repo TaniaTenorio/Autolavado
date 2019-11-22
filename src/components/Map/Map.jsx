@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import '../../App.css';
+
+import Button from '../Button';
+
 class Map extends Component {
   constructor(props) {
     super(props);
@@ -17,13 +22,23 @@ class Map extends Component {
       style: props.style
     };
   }
-  getPlatform() {
+  
+  
+   getPlatform() {
     return new window.H.service.Platform(this.state);
   }
-  getMap(container, layers, settings) {
-    return new window.H.Map(container, layers, settings);
+   async getMap(container, layers, settings) {
+    
+    return  await new window.H.Map(container, layers, settings);
+    
   }
-  getEvents(map) {
+  
+  // async function getMap(container, layers, settings) {
+  //    await new window.H.Map(container, layers, settings)  
+  // }
+
+  
+   getEvents(map) {
     return new window.H.mapevents.MapEvents(map);
   }
   getBehavior(events) {
@@ -32,36 +47,94 @@ class Map extends Component {
   getUI(map, layers) {
     return new window.H.ui.UI.createDefault(map, layers);
   }
-  componentDidMount() {
+  
+  async componentDidMount() {
     this.platform = this.getPlatform();
-    var layers = this.platform.createDefaultLayers();
+   let createDefaultLayers = this.platform.createDefaultLayers()
+    // var layers = this.setState({platform: createDefaultLayers});
     var element = document.getElementById('here-map');
-    this.map = this.getMap(element, layers.normal.map, {
+    this.map = await this.getMap(element,  createDefaultLayers.normal.map, {
       center: this.state.center,
       zoom: this.state.zoom
     });
+
+    // var onResult = await function(result) {
+    //   var locations = result.Response.View[0].Result,
+    //     position,
+    //     marker;
+    //   // Add a marker for each location found
+    //   for (let i = 0;  i < locations.length; i++) {
+    //   position = {
+    //     lat: locations[i].Location.DisplayPosition.Latitude,
+    //     lng: locations[i].Location.DisplayPosition.Longitude
+    //   };
+    //   marker = new window.H.map.Marker(position);
+    //   this.map.addObject(marker);
+    //   }
+    // };
+    var geocoder = await this.platform.getGeocodingService();
+    // var geocodingParams = {
+    //   searchText: '200 S Mathilda Ave, Sunnyvale, CA'
+    // };
+    // geocoder.geocode(geocodingParams, onResult, function(e) {
+    //   console.log(e);
+    // });
+    
+    //Código para globito
+
+    var reverseGeocodingParameters = {
+      prox: '-99.803085, 19.491327, 1000',
+      mode: 'retrieveAddresses',
+      maxresults: 1
+    };
+
+    function onSuccess(result) {
+      var location = result.Response.View[0].Result[0];
+    
+      // Create an InfoBubble at the returned location with
+      // the address as its contents:
+      ui.addBubble(new window.H.ui.InfoBubble({
+        lat: location.Location.DisplayPosition.Latitude,
+        lng: location.Location.DisplayPosition.Longitude
+       }, { content: location.Location.Address.Label }));
+    };
+    geocoder.reverseGeocode(
+      reverseGeocodingParameters,
+      onSuccess,
+      function(e) { console.log(e)});
+   
+    
     var events = this.getEvents(this.map);
     // eslint-disable-next-line
     var behavior = this.getBehavior(events);
     // eslint-disable-next-line
-    var ui = this.getUI(this.map, layers);
+    var ui = this.getUI(this.map, createDefaultLayers);
   }
-  shouldComponentUpdate(props, state) {
-    this.changeTheme(props.theme, props.style);
-    return false;
-  }
-  changeTheme(theme, style) {
-    var tiles = this.platform.getMapTileService({ type: 'base' });
-    var layer = tiles.createTileLayer('maptile', theme, 256, 'png', {
-      style: 'flame'
-    });
-    this.map.setBaseLayer(layer);
-  }
+  
+  
   render() {
+    
     return (
       <div
         id='here-map'
-        style={{ width: '100%', height: '100vh', background: 'grey' }}></div>
+
+        style={
+          { width: '95vw',
+           height: '90vh',
+          position:'relative',
+          marginLeft:'0'}
+          }>
+
+         <div className="input-map">
+           <input className="input-style" type="text" placeholder="Ingresa tu dirección"/>
+         </div>
+         <div className="btn-map">
+           <Link to="/schedule">
+            <Button text={this.props.text}/>
+           </Link>
+         </div>
+
+        </div>
     );
   }
 }
