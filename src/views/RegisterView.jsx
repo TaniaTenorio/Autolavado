@@ -5,10 +5,10 @@ class RegisterView extends Component {
   constructor(props){
     super(props);
     this.state={
-      name: '',
-      email: '',
-      phoneNumber: '',
-      password: ''
+      Nombre: '',
+      Email: '',
+      Teléfono: '',
+      Contraseña: ''
     }
   }
   onChangeHandler = e => {
@@ -32,7 +32,7 @@ class RegisterView extends Component {
         title={"Registro"}
         text1={"Nombre"}
         text2={"Teléfono"}
-        text3={"Correo electrónico"}
+        text3={"Email"}
         text4={"Contraseña"}
         text5={"Confirmar contraseña"}
         name={this.state.name}

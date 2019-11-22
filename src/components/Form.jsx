@@ -72,12 +72,13 @@ class Form extends Component {
                 name='password'
                 type={this.props.type}
                 placeholder='Confirmar contraseña'
-                value={this.props.password}
-                onChange={this.props.onChangeHandler}></input>
+                // value={this.props.password}
+                // onChange={this.props.onChangeHandler}
+                />
             </label>
             <div className='checkbox-label'>
               <label>
-                <input type='checkbox' />
+                <input type='checkbox' required={true}/>
                 <span>Acepto términos y condiciones</span>
               </label>
               <br />
