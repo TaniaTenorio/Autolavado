@@ -1,3 +1,7 @@
 fieldset {
     border: none;
 }
+.schedule-view {
+    display: flex;
+    flex-direction: column;
+}

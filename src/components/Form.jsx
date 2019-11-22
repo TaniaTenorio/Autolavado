@@ -44,7 +44,7 @@ class Form extends Component {
               <input
                 name='name'
                 type='text'
-                placeholder='Nombre'
+                placeholder={this.props.text1}
                 value={this.state.name}
                 onChange={this.onChangeHandler}></input>
             </label>
@@ -52,7 +52,7 @@ class Form extends Component {
               <input
                 name='phoneNumber'
                 type='text'
-                placeholder='Teléfono'
+                placeholder={this.props.text2}
                 value={this.state.phone}
                 onChange={this.onChangeHandler}></input>
             </label>
@@ -60,7 +60,7 @@ class Form extends Component {
               <input
                 name='email'
                 type='email'
-                placeholder='Correo electrónico'
+                placeholder={this.props.text3}
                 value={this.state.email}
                 onChange={this.onChangeHandler}></input>
             </label>
@@ -68,7 +68,7 @@ class Form extends Component {
               <input
                 name='password'
                 type='password'
-                placeholder='Contraseña'
+                placeholder={this.props.text4}
                 value={this.state.password}
                 onChange={this.onChangeHandler}></input>
             </label>
