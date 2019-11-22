@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 import BtnWhite from '../components/BtnWhite';
 import '../components/Components.css'
 import Button from '../components/Button'
@@ -18,7 +20,9 @@ class ServiceView extends Component {
                     <BtnWhite text={"personalizado"} />
                     <p>Arma tu propio paquete con los servicios<br></br> que deseas (pulido, encerado, etc.)</p>
                 </article>
-                <Button text={"Siguiente"} />
+                <Link to="/serviceConfirmation">
+                    <Button text={"Siguiente"} />
+                </Link>
             </section>
         )
     }

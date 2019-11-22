@@ -10,10 +10,8 @@ class MapView extends Component {
     return (
       <React.Fragment>
         <Navbar />
-        <MapPages />
-        <Link to='/schedule'>
-          <Button text={'Tiempo de espera: 20min'} />
-        </Link>
+        <MapPages text={"Tiempo de espera: 20min"}/>
+        
       </React.Fragment>
     );
   }

@@ -11,7 +11,7 @@ class MapView extends Component {
     return (
       <React.Fragment>
         <Navbar />
-        <MapPages />
+        <MapPages text={"Solicitar Servicio"}/>
       </React.Fragment>
     );
   }
