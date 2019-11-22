@@ -9,9 +9,9 @@ import './Views.css';
 class Login extends Component {
   render() {
     return (
-      <section className="login-form">
+      <section className='login-form'>
         <figure>
-          <image src="" alt="logo" />          
+          <img src='./assets/LOGO-CARGUASH.svg' alt='logo' />
         </figure>
         <article>
           <fieldset>
@@ -22,12 +22,12 @@ class Login extends Component {
               <input type='password' placeholder='Contraseña'></input>
             </label>
             <Link to='/home'>
-              <Button text={"Iniciar sesión"}/>
+              <Button text={'Iniciar sesión'} />
             </Link>
           </fieldset>
           <fieldset>
             <Link to='/register'>
-              <Button text={"Registarse"}/>
+              <Button text={'Registarse'} />
             </Link>
           </fieldset>
         </article>

@@ -25,3 +25,10 @@ fieldset {
 .divider {
     margin: 5rem;
 }
+
+.checkbox-label {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
