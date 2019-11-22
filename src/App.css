@@ -10,14 +10,20 @@
 
 .btn-map{
   position:absolute;
-  z-index: 1;
-  top: 75vh;
-  left: 15vh;
-  /* margin-top: 29rem;
+
+  z-index: 10;
+  margin-top: 34rem;
+
   margin-left: 1rem;
   
   color: white;
   width: 19rem;
+  height: 7vh;
+}
+
+.art-service{
+  text-align: center;
+
   height: 7vh; */
 }
 .input-map {
@@ -31,4 +37,5 @@
 }
 .input-style {
  border-bottom: white;
+
 }

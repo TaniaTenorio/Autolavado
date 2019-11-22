@@ -52,6 +52,31 @@ h3 {
     color: #020723;
 }
 
+
+.section-selec-service{
+    width: inherit;
+    height: 100vh;
+}
+
+.text-title-service{
+    font-size:20px;
+    padding: 0rem 0rem 2rem 0rem;
+    text-align: center;
+}
+.btn-service{
+    background-color: white;
+}
+.text-black{
+    color: black;
+}
+.btn-w{
+    border-radius: 40px;
+}
+.map-box-ser{
+    width: 15rem;
+    height: 10vh;
+
 #slide-out a{
     color: #020723;
+
 }
