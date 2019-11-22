@@ -28,11 +28,11 @@ class Sidebar extends Component {
             <div className='divider' />
           </li>
           <li>
-            <li>
+            
               <a href='#!' className='subheader'>
                 Mi plan
               </a>
-            </li>
+            
             <a>Mis autos</a>
           </li>
           <li>
