@@ -7,6 +7,11 @@ import Register from './views/RegisterView';
 import Home from './views/HomeView';
 import Schedule from './views/ScheduleView';
 import VehicleForm from './views/VehicleForm';
+import Service from './views/ServiceView';
+import ServiceLocation from './views/ServiceLocationView';
+import PaymentMethod from './views/PaymentMethodView';
+import ServiceConfirmation from './views/ServiceConfirmationView';
+// import PayPal from './views/PayPal';
 
 class App extends Component {
   render() {
@@ -17,6 +22,11 @@ class App extends Component {
         <Route path='/home' component={Home} />
         <Route path='/schedule' component={Schedule} />
         <Route path='/vehicleForm' component={VehicleForm} />
+        <Route path='/service' component={Service} />
+        <Route path='/serviceLocation' component={ServiceLocation} />
+        <Route path='/paymentMethod' component={PaymentMethod} />
+        <Route path='/serviceConfirmation' component={ServiceConfirmation} />
+        {/* <Route path='/payPal' component={PayPal} /> */}
         {/* <Route path='/user' component={UserProfile} />
           <Route path='/admin' component={Admin} />
           <Route path='/worker' component={Worker} /> */}
