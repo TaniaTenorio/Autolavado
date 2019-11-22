@@ -6,12 +6,17 @@ class GuasherView extends Component {
     render() {
         return(
             <section>
-                <h1>¿Quién va a lavar tu auto?</h1>
-                <article>
-                    <figure>
-                        <img src="../src/assets/Güasher.png" alt="güasher"/>
-                        <Button text={"Contactar"} />
+                <h3>¿Quién va a lavar tu auto?</h3>
+                <article style={
+                    { display: 'flex',
+                      flexDirection: 'column',
+                      alignContent: 'center'
+                }
+                }>
+                    <figure style={{ display: 'flex', flexDirection: 'column', alignContent: 'center'}}>
+                        <img style={{width: '10rem', margin:'auto'}} src="./assets/Güasher.png" alt="güasher"/>
                     </figure>
+                        <Button text={"Contactar"} />
                 </article>
                 <article>
                     <ul>
@@ -21,7 +26,7 @@ class GuasherView extends Component {
                         <li>Calificaciones: <i></i>115</li>
                     </ul>
                     <figure>
-                        <img src="" alt="burbujas"></img>
+                        <img src="./assets/Bubbles.png" alt="burbujas"></img>
                     </figure>
                     <Button text={"Aceptar"} />
                 </article>
