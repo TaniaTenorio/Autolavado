@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 // import './Map.css';
 import Map from './Map';
+
+
 class MapPages extends Component {
   constructor(props) {
     super(props);
@@ -30,6 +32,7 @@ class MapPages extends Component {
           zoom='5'
           theme={this.state.theme}
         />
+      
       </section>
     );
   }
