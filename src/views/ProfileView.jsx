@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Views.css';
+import { Link } from 'react-router-dom';
 
 class ProfileView extends Component {
   constructor(props) {
@@ -21,8 +22,12 @@ class ProfileView extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <i className='material-icons'>chevron_left</i>
+      <section>
+        <Link to='/follow'>
+          <a href=''>
+            <i className='material-icons'>chevron_left</i>
+          </a>
+        </Link>
         <form action=''>
           <label>
             <input
@@ -49,7 +54,7 @@ class ProfileView extends Component {
             />
           </label>
         </form>
-      </React.Fragment>
+      </section>
     );
   }
 }

@@ -47,8 +47,11 @@ class Sidebar extends Component {
             <a href='#!' className='subheader'>
               Mi plan
             </a>
-
-            <a>Mis autos</a>
+          </li>
+          <li>
+            <Link to='/myCars'>
+              <a>Mis autos</a>
+            </Link>
           </li>
           <li>
             <a className='waves-effect' href='#!'>
