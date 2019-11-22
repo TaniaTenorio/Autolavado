@@ -29,7 +29,7 @@ class MapPages extends Component {
           // lng='-99.163085'
           lat='19.421327'
           lng='-99.163085'
-          zoom='0'
+          zoom='5'
           theme={this.state.theme}
         />
       
