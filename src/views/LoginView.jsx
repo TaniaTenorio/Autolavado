@@ -1,17 +1,38 @@
 import React, { Component } from 'react';
-import Form from '../components/Form';
+import Button from '../components/Button';
+import { Link } from 'react-router-dom';
+
+import './Views.css';
 
 // import { Link } from 'react-router-dom';
 
-
 class Login extends Component {
-  
   render() {
-
     return (
-      <Form />
-    )
-
+      <section className="login-form">
+        <figure>
+          <image src="" alt="logo" />          
+        </figure>
+        <article>
+          <fieldset>
+            <label name='phone-or-mail'>
+              <input type='text' placeholder='Teléfono o correo'></input>
+            </label>
+            <label name='phone-or-mail'>
+              <input type='password' placeholder='Contraseña'></input>
+            </label>
+            <Link to='/home'>
+              <Button text={"Iniciar sesión"}/>
+            </Link>
+          </fieldset>
+          <fieldset>
+            <Link to='/register'>
+              <Button text={"Registarse"}/>
+            </Link>
+          </fieldset>
+        </article>
+      </section>
+    );
   }
 }
 

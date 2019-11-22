@@ -112,6 +112,7 @@ class Map extends Component {
     return (
       <div
         id='here-map'
+
         style={{ width: '100%', height: '100vh', background: 'grey' }}>
           <div>
             <input>
@@ -125,6 +126,7 @@ class Map extends Component {
           
 
         </div>
+
     );
   }
 }
