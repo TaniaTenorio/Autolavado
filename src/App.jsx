@@ -15,6 +15,7 @@ import ServiceConfirmation from './views/ServiceConfirmationView';
 
 import GuasherView from './views/GuasherView';
 import MyCarsView from './views/MyCarsView';
+import ProfileView from './views/ProfileView';
 
 import FollowWasherView from './views/FollowWasherView';
 
@@ -35,6 +36,7 @@ class App extends Component {
         <Route path='/paymentMethod' component={PaymentMethod} />
         <Route path='/serviceConfirmation' component={ServiceConfirmation} />
 
+        <Route path='/profile' component={ProfileView} />
 
         <Route path='/guasher' component={GuasherView} />
         <Route path='/myCars' component={MyCarsView} />
