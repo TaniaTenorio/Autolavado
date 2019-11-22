@@ -117,7 +117,12 @@ class Map extends Component {
     return (
       <div
         id='here-map'
-        style={{ width: '95vw', height: '90vh', position:'relative', marginLeft:'0'}}>
+        style={
+          { width: '95vw',
+           height: '90vh',
+          position:'relative',
+          marginLeft:'0'}
+          }>
          <div className="input-map">
            <input className="input-style" type="text" placeholder="Ingresa tu dirección"/>
          </div>
