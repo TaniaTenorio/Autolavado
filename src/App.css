@@ -10,8 +10,8 @@
 
 .btn-map{
   position:absolute;
-  z-index: 999;
-  margin-top: 29rem;
+  z-index: 10;
+  margin-top: 34rem;
   margin-left: 1rem;
   background-color: #42A5F5;
   color: white;

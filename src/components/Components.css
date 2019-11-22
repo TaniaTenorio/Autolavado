@@ -51,3 +51,8 @@ h3 {
     font-weight: 700;
     color: #020723;
 }
+
+.section-selec-service{
+    width: inherit;
+    height: 100vh;
+}
