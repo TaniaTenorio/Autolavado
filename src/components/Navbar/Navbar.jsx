@@ -1,0 +1,16 @@
+import React, { Component } from 'react';
+import Menu from './Menu';
+
+class Navbar extends Component {
+  render() {
+    return (
+      <header>
+        <nav>
+          <Menu />
+        </nav>
+      </header>
+    );
+  }
+}
+
+export default Navbar;
