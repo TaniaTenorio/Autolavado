@@ -21,9 +21,9 @@ class RegisterView extends Component {
 
   onSubmit = e => {
     e.preventDefault();
-    localStorage.setItem('clientes', JSON.stringify(this.state));
+    localStorage.setItem('clients', JSON.stringify(this.state));
     this.props.history.push('/home');
-    console.log(JSON.parse(localStorage.getItem('clientes')));
+    console.log(JSON.parse(localStorage.getItem('clients')));
     //this.props.agregarClientes(this.state.name);
   };
   render() {
@@ -39,6 +39,7 @@ class RegisterView extends Component {
         phone={this.state.phone}
         email={this.state.email}
         password={this.state.password}
+        type={"password"}
         onChangeHandler={this.onChangeHandler}
         onSubmitHandler={this.onSubmit} />
       );

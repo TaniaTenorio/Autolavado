@@ -37,7 +37,7 @@ class Form extends Component {
           <fieldset>
             <label name='text'>
               <input
-                name='name'
+                name={this.props.text1}
                 type='text'
                 placeholder={this.props.text1}
                 value={this.props.name}
@@ -45,7 +45,7 @@ class Form extends Component {
             </label>
             <label name='phone-number'>
               <input
-                name='phoneNumber'
+                name={this.props.text2}
                 type='text'
                 placeholder={this.props.text2}
                 value={this.props.phone}
@@ -53,7 +53,7 @@ class Form extends Component {
             </label>
             <label name='email'>
               <input
-                name='email'
+                name={this.props.text3}
                 type='email'
                 placeholder={this.props.text3}
                 value={this.props.email}
@@ -61,8 +61,8 @@ class Form extends Component {
             </label>
             <label>
               <input
-                name='password'
-                type='password'
+                name={this.props.text4}
+                type={this.props.type}
                 placeholder={this.props.text4}
                 value={this.props.password}
                 onChange={this.props.onChangeHandler}></input>
@@ -70,7 +70,7 @@ class Form extends Component {
             <label>
               <input
                 name='password'
-                type='password'
+                type={this.props.type}
                 placeholder='Confirmar contraseña'
                 value={this.props.password}
                 onChange={this.props.onChangeHandler}></input>
