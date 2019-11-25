@@ -9,7 +9,7 @@ class ServiceView extends Component {
     render() {
         return(
             <section>
-                <article className="art-service">
+                <article >
                     <h1 className="text-title-service">Selecciona tu servicio</h1>
                     <BtnWhite text={"Básico"} className="text-black"/>
                     <p>Limpieza de exteriores: corrocería,<br></br> vidrios, llantas y rines</p>

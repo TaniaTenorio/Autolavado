@@ -45,7 +45,7 @@ class VehicleForm extends Component {
                 type={"text"}
                 onChangeHandler={this.onChangeHandler}
                 onSubmitHandler={this.onSubmit}
-                class={"block"}
+                class={"display: none"}
                 />
             </div>
         )

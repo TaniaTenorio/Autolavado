@@ -80,7 +80,7 @@ class Form extends Component {
             </label>
             <div className='checkbox-label'>
               <label>
-                <input type='checkbox' required={true}/>
+                <input type='checkbox' required={true} />
                 <span>Acepto términos y condiciones</span>
               </label>
               <br />
